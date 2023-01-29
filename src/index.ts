@@ -1,4 +1,5 @@
 import express from 'express';
+import logger from './utils/logger.util';
 
 // Constants
 const PORT = process.env.PORT || 3000;
@@ -14,5 +15,5 @@ app.get('/hello', (req, res) => {
 
 // Bootstrap
 app.listen(PORT, () => {
-	console.log(`App is running on port ${PORT}`);
+	logger.info(`App is running on port ${PORT}`);
 });
