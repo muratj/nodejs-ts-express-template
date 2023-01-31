@@ -1,6 +1,7 @@
 import express from 'express';
 import logger from './utils/logger.util';
 import { envConfig } from './configs/env.config';
+import helmet from 'helmet';
 
 // Environment configuration
 envConfig(process.env.NODE_ENV);
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 // App Configurations
+app.use(helmet());
 app.use(express.json());
 
 app.get('/hello', (req, res) => {
