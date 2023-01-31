@@ -1,5 +1,9 @@
 import express from 'express';
 import logger from './utils/logger.util';
+import { envConfig } from './configs/env.config';
+
+// Environment configuration
+envConfig(process.env.NODE_ENV);
 
 // Constants
 const PORT = process.env.PORT || 3000;
