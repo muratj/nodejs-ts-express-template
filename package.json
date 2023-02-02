@@ -2,10 +2,10 @@
   "name": "nodejs-ts-express-template",
   "version": "1.0.0",
   "description": "NodeJS TypeScript Express starter template",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "NODE_ENV=prod node ./dist/index.js",
-    "dev": "NODE_ENV=dev nodemon ./src/index.ts",
+    "start": "NODE_ENV=prod node ./dist/main.js",
+    "dev": "NODE_ENV=dev nodemon ./src/main.ts",
     "build": "tsc -p .",
     "lint": "eslint . --ext .ts"
   },

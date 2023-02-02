@@ -3,6 +3,7 @@ import logger from './utils/logger.util';
 import { envConfig } from './configs/env.config';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import router from './routes';
 
 // Environment configuration
 envConfig(process.env.NODE_ENV);
@@ -17,9 +18,7 @@ app.use(morgan('dev'));
 app.use(helmet());
 app.use(express.json());
 
-app.get('/hello', (req, res) => {
-	res.send({ greeting: 'Hello world' });
-});
+app.use(router);
 
 // Bootstrap
 app.listen(PORT, () => {
